@@ -1,0 +1,21 @@
+ALGORITHM INSERTION_SORT
+VAR
+    t : ARRAY_OF INTEGER[10];
+    i, j, k, elt : INTEGER;
+BEGIN
+    read(n);
+    FOR  k FROM 0 TO n DO
+        Write('print array');
+        Read(t[k])
+    END_FOR
+    
+    FOR i FROM 1 TO t.length-1 STEP 1  DO
+        j := i- 1;
+        WHILE(j<= 0 AND t[j] >  t[i]) DO
+            t[j+1] := t[j];
+            j := j- 1;
+        END_WHILE
+        t[j+1] :=  t[i];
+    END_FOR
+
+END
